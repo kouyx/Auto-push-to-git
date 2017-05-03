@@ -14,5 +14,5 @@ while True:
 	if former_md5 != md5sum("test.txt"):
 		os.system("git add test.txt")
 		os.system("git commit -m \"Data changed.\"")
-		os.system("git push")
+		os.system("git push origin master")
 		former_md5 = md5sum("test.txt")
