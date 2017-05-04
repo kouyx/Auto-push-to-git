@@ -1,4 +1,4 @@
-# Python Script to Update File automatically
+# Auto-push File to Git Once Changed
 
 Step 1. Creat a session in your terminal and change directory to the repo with target file contained;
 
