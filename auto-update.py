@@ -39,7 +39,7 @@ print("Press Ctrl + C to terminate if needed.\n")
 while True:
     if former_hash != hashsum(filename):
         print("====== Updating data ======")
-        os.system("git add test.txt")
+        os.system("git add {}".format(filename))
         os.system("git commit -m \"Data changed.\"")
         os.system("git push origin master")
         former_hash = hashsum(filename)
