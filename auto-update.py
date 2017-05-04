@@ -46,7 +46,7 @@ try:
             print("====== Updating data ======")
             os.system("git add {}".format(filename))
             os.system("git commit -m \"Data changed.\"")
-            # os.system("git push origin master")
+            os.system("git push origin master")
             former_hash = hashsum(filename)
             update_times += 1
             print("====== Data updated ====== for {} times in this session\n"
