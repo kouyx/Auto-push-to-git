@@ -3,6 +3,12 @@ import hashlib
 
 
 def hashsum(file_name, algorithm="md5"):
+    # select algorithm optionally; default is md5
+    if algorithm == "md5":
+        method = hashlib.md5()
+    elif algorithm == "sha1":
+        method = hashlib.sha1()
+
     # read 8K of file content (as a chunk) at one time
     def read_chunks(file_object):
         file_object.seek(0)
@@ -13,11 +19,6 @@ def hashsum(file_name, algorithm="md5"):
         else:
             file_object.seek(0)
 
-    # select algorithm optionally; default is md5
-    if algorithm == "md5":
-        method = hashlib.md5()
-    elif algorithm == "sha1":
-        method = hashlib.sha1()
     # read file
     if isinstance(file_name, basestring) and os.path.exists(file_name):
         with open(file_name, 'rb') as file_object:
